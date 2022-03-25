@@ -1,0 +1,23 @@
+<!-- フォームは書いときますんで、検索結果を表示するようにしてね --!>
+
+<h1>県名で名簿検索</h1>
+
+県名を入力してください。
+<form action="birthplace" method="get">
+  <input name="pref"/>
+  <input type="submit" value="検索">
+</form>
+
+<h2>検索結果</h2>
+
+<!-- 課題8-2: ここから先に検索結果を表示するように書きましょう --!>
+<ul>
+  <% for(i=0;i<results.length;i++){ %>
+    <li>
+      <%- results[i].lastname %>
+      <%- results[i].firstname %>
+      (<%- results[i].birthday%> , 
+      <%- results[i].birthplace%>)
+    </li>
+  <% } %>
+</ul>

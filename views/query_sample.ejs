@@ -1,0 +1,10 @@
+<ul>
+  <% for(i=0;i<results.length;i++){ %>
+    <li>
+      <%- results[i].lastname %>
+      <%- results[i].firstname %>
+      (<%- results[i].birthday%> , 
+      <%- results[i].birthplace%>)
+    </li>
+  <% } %>
+</ul>
